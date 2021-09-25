@@ -143,6 +143,13 @@ const array = [
     ID: "73064207",
   },
   {
+    category: "Matematyka",
+    subcategory: "Matematyka Dyskretna",
+    name: "Matematyka Dyskretna",
+    author: "K. Ross",
+    ID: "66287388",
+  },
+  {
     category: "Informatyka",
     subcategory: "",
     name: "C# - Praktyczny kurs",
