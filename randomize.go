@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func main() {
+func randomize() {
 	rand.Seed(time.Now().Unix())
 
 	var times int = 10
@@ -20,7 +20,6 @@ func main() {
 		x := rand.Intn(int(max-min)) - int(min)
 		if x > int(min) && x < int(max) {
 			fmt.Println(x)
-			fmt.Println("")
 			i++
 		}
 	}
