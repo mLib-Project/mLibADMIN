@@ -2,3 +2,4 @@
 *.env.go
 go.mod
 go.sum
+*.pdf

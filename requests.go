@@ -7,9 +7,12 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"strconv"
 )
 
 var pageURL string = "https://mlib.mslotwinski.eu/api"
+
+// var pageURL string = "http://localhost/api"
 
 func get() {
 	resp, err := http.Get(pageURL)
@@ -34,11 +37,13 @@ func post() {
 
 func pushBook(book book) {
 	postBody, _ := json.Marshal(map[string]string{
-		"category":    book.category,
+		"category":    categories[book.category].name,
+		"family":      strconv.Itoa(categories[book.category].family),
 		"subcategory": book.subcategory,
 		"name":        book.name,
 		"author":      book.author,
-		"ID":          book.ID,
+		"source":      book.source,
+		"ID":          makeID(10),
 	})
 	responseBody := bytes.NewBuffer(postBody)
 	//Leverage Go's HTTP Post function to make request

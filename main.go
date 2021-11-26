@@ -15,6 +15,7 @@ func menu() {
 	fmt.Println("\033[33m" + "1 - Wyświetl bazę danych" + "\033[0m")
 	fmt.Println("\033[33m" + "2 - Przeładuj bazę danych)" + "\033[0m")
 	fmt.Println("\033[33m" + "3 - Usuń bazę danych)" + "\033[0m")
+	fmt.Println("\033[33m" + "4 - Analizuj bazę danych)" + "\033[0m")
 	var command int
 	fmt.Scan(&command)
 	if command == 0 {
@@ -29,6 +30,9 @@ func menu() {
 	}
 	if command == 3 {
 		delete()
+	}
+	if command == 4 {
+		analyse()
 	}
 	fmt.Println("\nCoś jeszcze?")
 	menu()
